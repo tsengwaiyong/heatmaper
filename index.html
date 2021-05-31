@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hatmaper</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="fonts/remixicon.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <div class="layerbar">
+    <div class="download"><i class="ri-download-2-fill"></i>导出为png</div>
+
+  </div>
+
+  <div class="drewboard">
+    <div class="upload">
+      <div class="button">
+        <i class="ri-image-add-fill"></i>
+        拖拽图片到此处或点击上传
+      </div>
+      <input class="btn-upload" title="" type="file" name="" onchange="upload(event)" accept="image/png, image/jpeg">
+    </div>
+    <div class="heatmap-drawarea">
+      <canvas class="cvs"></canvas>
+
+      <div class="heatmap">
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="actionbar">
+    <span class="btn-round" id="redraw" tooltips="擦除所有热区"><i class="ri-eraser-line"></i></span>
+    <span class="btn-round disable" id="undo" tooltips="撤回"><i class="ri-arrow-go-back-line"></i></span>
+    <span class="btn-round disable" id="redo" tooltips="重做"><i class="ri-arrow-go-forward-line"></i></span>
+
+  </div>
+  <div class="toolbar">
+    <label>radius</label><input type="number" name="heatmap-radius" value="60">
+    <br>
+    <label>opacity</label><input type="number" name="heatmap-opacity" value="60">
+    <br>
+  </div>
+
+  <script src="js/heatmap.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/uploadimg.js"></script>
+  <script src="js/keyboard.js"></script>
+
+</body>
+
+</html>
